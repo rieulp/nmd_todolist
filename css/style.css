@@ -1,0 +1,209 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+html,
+body {
+  overflow: hidden;
+  color: #fff;
+  font-family: "Do Hyeon", "Noto Sans KR", sans-serif;
+  letter-spacing: 2px;
+  /* font-family: "Noto Sans KR", sans-serif; */
+}
+.wrapper {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.wrap_clock {
+  flex-basis: 40vh;
+  flex-direction: column-reverse;
+  display: flex;
+}
+.clock {
+  font-size: 90px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.user_area {
+  flex-basis: 50vh;
+}
+.login_form {
+  width: 330px;
+  margin: 20px 0;
+  display: flex;
+}
+
+.login_form button {
+  width: 70px;
+  margin-left: 10px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 40px;
+  color: #fff;
+}
+
+.login_form input {
+  width: 250px;
+}
+
+.text_input {
+  font-size: 25px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 2px white;
+  text-align: center;
+  color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Do Hyeon", "Noto Sans KR", sans-serif;
+}
+.text_input::placeholder {
+  color: #aaa;
+}
+
+.greeting {
+  font-size: 30px;
+  margin: 20px 0;
+  text-align: center;
+}
+.wrap_todo {
+  margin-top: 40px;
+}
+.todo_form input {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.wrap_todo_list {
+  overflow: auto;
+  margin-top: 10px;
+  max-height: calc(50vh - 130px);
+}
+.wrap_todo_list::-webkit-scrollbar {
+  width: 10px;
+}
+.wrap_todo_list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+.wrap_todo_list::-webkit-scrollbar-track {
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+}
+
+.todo_list li {
+  font-size: 20px;
+  line-height: 30px;
+}
+.todo_list button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  height: 30px;
+  font-size: 20px;
+}
+
+.quote {
+  flex: none;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #ddd;
+}
+.quote span:first-child {
+  font-size: 21px;
+  display: block;
+  margin: 10px 0;
+}
+.quote span:last-child {
+  display: block;
+}
+
+.weather {
+  flex: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+}
+.weather_ico {
+  vertical-align: bottom;
+  margin-bottom: 5px;
+}
+.weather span:nth-child(2) {
+  font-size: 21px;
+  line-height: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.weather span:last-child {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .todo_list {
+    min-width: 400px;
+    max-width: 610px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+  }
+  .todo_list li {
+    min-width: 300px;
+    max-width: 615px;
+    display: inline-block;
+  }
+  .todo_form input {
+    width: 610px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .clock {
+    font-size: 80px;
+  }
+  .greeting {
+    font-size: 25px;
+  }
+  .todo_form input {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .clock {
+    font-size: 60px;
+  }
+  .greeting {
+    font-size: 20px;
+  }
+  .todo_form input {
+    width: 230px;
+  }
+}

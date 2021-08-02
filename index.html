@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Momentum</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrap_clock">
+            <h2 id="clock" class="clock">00:00:00</h2>
+        </div>
+        <form id="login-form" class="hidden login_form">
+            <input type="search" required maxlength="15" placeholder="What is your name?" class="text_input">
+            <button type="submit" id="user-name">Log In</button>
+        </form>
+        <div class="hidden user_area">
+            <h1 class="greeting" id="greeting"></h1>
+            <div class="wrap_todo">
+                <form action="" id="todo-form" class="todo_form">
+                    <input type="search" placeholder="오늘의 할일은?" class="text_input" required>
+                </form>
+                <div class="wrap_todo_list">
+                    <ul id="todo-list" class="todo_list"></ul>
+                </div>
+            </div>
+            <div id="quote" class="quote">
+                <span></span>
+                <span></span>
+            </div>
+            <div id="weather" class="weather">
+                <img src="" alt="" class="weather_ico">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+    <script src="./js/greetings.js"></script>
+    <script src="./js/qoutes.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/clock.js"></script>
+</body>
+</html>
